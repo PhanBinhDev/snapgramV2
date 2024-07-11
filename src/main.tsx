@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "@/context/AuthContext";
 import { QueryProvider } from "@/lib/react-query/QueryProvider";
 
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <QueryProvider>
         <AuthProvider>
           <App />
+          <SpeedInsights />
         </AuthProvider>
       </QueryProvider>
     </BrowserRouter>
